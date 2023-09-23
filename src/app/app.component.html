@@ -1,0 +1,32 @@
+
+<!-- <course-card *ngFor="let courseItem of Courses" [course]="courseItem" (courseClicked)="courseSelected($event)">
+<course-image class="imgStyle" [course]="courseItem" *ngIf="courseItem.id == 5"> </course-image>
+<course-image class="imgStyle" [course]="courseItem" *ngIf="courseItem.id == 2"> </course-image>
+<course-image class="imgStyle" [course]="courseItem" *ngIf="courseItem.id == 3"> </course-image>
+</course-card> -->
+
+<!-- <course-card  [course]="Courses[5]" (courseClicked)="courseSelected($event)">
+  <course-image class="imgStyle" [course]="Courses[5]" > </course-image>
+  <course-image class="imgStyle" [course]="Courses[6]" > </course-image>
+  <course-image class="imgStyle" [course]="Courses[7]" > </course-image>
+  </course-card> -->
+<!-- <h2>My First App Highlighter</h2>
+<div> 
+  <input type="radio" name="colors" (click)="color = 'Green'"> Green
+  <input type="radio" name="colors" (click)="color='Red'"> Red
+</div>
+<p [appHighlight]="color">Highlight Me !!</p>-->
+<!-- 
+  <course-card  [course]="Courses[5]" (courseClicked)="courseSelected($event)">
+  </course-card>
+
+  <a routerLink="/course"> course </a>  -->
+  <h4>{{title|titlecase}}</h4>
+  <h4>{{startDate|date:'MMM-dd-yyyy'}} </h4>
+  <h4>{{rate|percent}}</h4>
+  <h4>{{currency|currency:'GBP'}} </h4>
+  <div *ngFor="let c of Courses[0]|keyvalue"> 
+      {{c.key+": "+c.value}}
+  </div>
+  {{Courses[1]|json}}
+  <router-outlet></router-outlet>

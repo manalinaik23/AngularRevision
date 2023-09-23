@@ -1,0 +1,16 @@
+<div class="container"> 
+    <h3>{{course?.category}}</h3>
+    <!-- <ng-content> </ng-content> -->
+    <img [src]="course?.iconUrl" width="400px" height="700px" *ngTemplateOutlet="noImage;context:{description:course?.description}">
+    <p>{{course?.description}} </p>
+    <p>{{course?.longDescription}}</p>
+    <span>{{course?.lessonsCount}}</span>
+   <button (click)="courseClicked()">Click </button>
+</div>
+
+
+
+
+<ng-template #noImage let-coursName="desscription"> 
+    <p>image is not available !!&&&&</p>>
+</ng-template>
